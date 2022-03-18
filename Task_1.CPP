@@ -128,5 +128,32 @@ int main(void )
 	human= NULL;*/
 	
 //Step 4
+	//Example code	-Where we take and then relinquish the memory from the free store
+	//while(1 )
+	//{
+	//Block 1, memory leak
+		//int* p= new int;
+		
+		//Removing these will cause a memeory leak and the program will balloon in size
+		//delete p;
+		//p= NULL;
+		
+	//Block 2 dangaling pointers - Assiging happends here, so does deletion but the issue is the pointers for the variables are not being 
+	/*//defined as NULL, because of this since the address has been relinuqished it could be used by the OS for another reason, possibly causing a crash
+		int * r = new int;
+		*r = 5;
+		delete r;
+		cout << *r << endl;*/
+		
+	//Block 3 Dereferancing Null pointers - This will cause anoutright crash in the application
+		//int * g = NULL;
+		//cout << *g << endl;
+		
+	//Block 4 not deleting dynamic arrays correclty,if we only delete the first array value, we will then lose access to the whole
+	//Array.
+		//int* m= new int[10 ];
+		//delete m;
+		//m= NULL;
+	//}
 	
 }
