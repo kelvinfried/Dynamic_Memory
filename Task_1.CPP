@@ -19,6 +19,27 @@ class Soldier
 		}
 };
 
+class Person
+{
+	public:
+		double* age;
+	
+		//Constructor
+		Person()
+		{
+			//Sets the value
+			age= new double(1000000000);
+		}
+		
+		//Destructor- To  delete the dynamic vairables, called upon class deletion
+		~Person()
+		{
+			//Delets it
+			delete age;
+			age= NULL;
+		}
+};
+
 int main(void )
 {
 //Step 1
@@ -67,7 +88,7 @@ int main(void )
 	soldier_pointer-> name= "new_soldier";
 	std::cout<<"The soldiers name is " <<soldier_pointer-> name <<std::endl;*/
 	
-	//Creating mutliple dynamic objects from a class
+	/*//Creating mutliple dynamic objects from a class
 	Soldier* solders_pointer= new Soldier[2 ];
 	
 	//Access the objects;
@@ -79,4 +100,21 @@ int main(void )
 		solders_pointer[i ].name= "funny soldier";
 		std::cout<<"The soldiers new name is " <<solders_pointer[i ].name <<std::endl <<std::endl;
 	}
+	
+	//Clean up of dynamic class
+	delete solders_pointer;	//You do not do delete *object pointer[]* as it does not work
+	solders_pointer= NULL;*/
+	
+	//Trial for working with a class with dynamic vairables
+	Person* human= new Person;
+	
+	//std::cout<<"Test output the age of the human is " <<human-> age <<std::endl;	
+	std::cout<<"Test output the age of the human is " <<*(human-> age )<<std::endl;
+		//I had to dereferances to called attribute so it could be accessed directly, not the memory address
+	//Clean up
+	delete human;
+	human= NULL;
+	
+	//Trial for working with multiple fully dynamic classes
+	
 }
