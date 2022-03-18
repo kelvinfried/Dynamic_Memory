@@ -106,15 +106,26 @@ int main(void )
 	solders_pointer= NULL;*/
 	
 	//Trial for working with a class with dynamic vairables
-	Person* human= new Person;
+	/*Person* human= new Person;
 	
 	//std::cout<<"Test output the age of the human is " <<human-> age <<std::endl;	
 	std::cout<<"Test output the age of the human is " <<*(human-> age )<<std::endl;
 		//I had to dereferances to called attribute so it could be accessed directly, not the memory address
 	//Clean up
 	delete human;
-	human= NULL;
+	human= NULL;*/
 	
 	//Trial for working with multiple fully dynamic classes
+	Person* human= new Person[2];
+	
+	for(int i=0; i< 2; i++ )
+	{
+		(*human[i ].age )= i;
+		std::cout<<"The human number " <<i <<" has an age of " <<(*human[i ].age ) <<std::endl;
+	}
+	
+	delete human;
+	human= NULL;
+	
 	
 }
