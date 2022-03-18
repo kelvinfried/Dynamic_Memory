@@ -196,5 +196,5 @@ int main(void )
 	//}
 	
 //Step 6
-	Car test_car;
+	Car test_car; 
 }
