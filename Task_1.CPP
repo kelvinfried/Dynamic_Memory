@@ -116,7 +116,7 @@ int main(void )
 	human= NULL;*/
 	
 	//Trial for working with multiple fully dynamic classes
-	Person* human= new Person[2];
+	/*Person* human= new Person[2];
 	
 	for(int i=0; i< 2; i++ )
 	{
@@ -125,7 +125,8 @@ int main(void )
 	}
 	
 	delete human;
-	human= NULL;
+	human= NULL;*/
 	
+//Step 4
 	
 }
