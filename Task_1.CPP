@@ -18,6 +18,4 @@ int main(void )
 	//Delete the dynamic int
 	delete i;
 	i= NULL;
-	
-	
 }
