@@ -195,6 +195,6 @@ int main(void )
 		//m= NULL;
 	//}
 	
-//Step 6
+//Step 6	//Step 7
 	Car test_car; 
 }
