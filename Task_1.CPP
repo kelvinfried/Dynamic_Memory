@@ -58,13 +58,25 @@ int main(void )
 	array_pointer= NULL;*/
 	
 //Step 3
-	//Create a dynamic object from the class
-	Soldier* soldier_pointer= new Soldier;
+	//Create a single dynamic object from the class
+	/*Soldier* soldier_pointer= new Soldier;
 	
 	//Access the object
 	std::cout<<"The soldiers name is " <<soldier_pointer-> name <<std::endl;
 	//Attempt to change the objects value 
 	soldier_pointer-> name= "new_soldier";
-	std::cout<<"The soldiers name is " <<soldier_pointer-> name <<std::endl;
+	std::cout<<"The soldiers name is " <<soldier_pointer-> name <<std::endl;*/
 	
+	//Creating mutliple dynamic objects from a class
+	Soldier* solders_pointer= new Soldier[2 ];
+	
+	//Access the objects;
+	for(int i= 0; i< 2; i++ )
+	{
+		//std::cout<<"The soldiers name is " <<solders_pointer[i ]-> name <<std::endl;	This does not work will need to use the array  access method like before when I was worked with the dynamic arrays
+		std::cout<<"The soldiers name is " <<solders_pointer[i ].name <<std::endl;
+		
+		solders_pointer[i ].name= "funny soldier";
+		std::cout<<"The soldiers new name is " <<solders_pointer[i ].name <<std::endl <<std::endl;
+	}
 }
