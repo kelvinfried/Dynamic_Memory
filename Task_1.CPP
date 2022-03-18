@@ -58,5 +58,13 @@ int main(void )
 	array_pointer= NULL;*/
 	
 //Step 3
-
+	//Create a dynamic object from the class
+	Soldier* soldier_pointer= new Soldier;
+	
+	//Access the object
+	std::cout<<"The soldiers name is " <<soldier_pointer-> name <<std::endl;
+	//Attempt to change the objects value 
+	soldier_pointer-> name= "new_soldier";
+	std::cout<<"The soldiers name is " <<soldier_pointer-> name <<std::endl;
+	
 }
