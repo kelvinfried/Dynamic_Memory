@@ -2,6 +2,23 @@
 
 //dynamic memory allocation
 
+class Soldier
+{
+	public:
+		std::string name;
+		int hp;
+		int attack;
+		std::string weapon_name;
+		
+		Soldier()
+		{
+			name= "soldier_test";
+			hp= 100;
+			attack= 10;
+			weapon_name= "generic_weapon";
+		}
+};
+
 int main(void )
 {
 //Step 1
