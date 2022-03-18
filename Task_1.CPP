@@ -28,10 +28,14 @@ int main(void )
 	
 	for(int i= 0; i< 5; i++ )
 	{	
-		array_pointer[i ]= i*30;
-		std::cout<<"The arrays element has a value of " << array_pointer[i ] <<std::endl;
-		std::cout<<"The arrays element has an address of " << &array_pointer[i ] <<std::endl <<std::endl;
+		array_pointer[i ]= 999;
+		//std::cout<<"The arrays element has a value of " << array_pointer[i ] <<std::endl;
+		//std::cout<<"The arrays element has an address of " << &array_pointer[i ] <<std::endl <<std::endl;
 	}
+	
+	std::cout<<"Element 3 of the array has a value of " <<std::endl;
+	std::cout<<"Value: "<< array_pointer[3 ] <<std::endl;
+	std::cout<<"Address: "<< &array_pointer[3 ] <<std::endl;
 	
 	delete[] array_pointer;
 	array_pointer= NULL;
