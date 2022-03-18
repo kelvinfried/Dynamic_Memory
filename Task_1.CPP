@@ -19,7 +19,7 @@ class Soldier
 		}
 };
 
-class Person
+/*class Person
 {
 	public:
 		int* age;
@@ -37,6 +37,45 @@ class Person
 			//Delets it
 			delete age;
 			age= NULL;
+		}
+};*/
+
+class Person
+{
+	public:
+		std::string name;
+		int age;
+		float height;
+		
+	
+		Person()
+		{
+			name= "Basic name";
+			age= 0;
+			height= 0.0f;
+		}
+		
+		~Person()
+		{
+		}
+};
+
+class Car
+{
+	public:
+		std::string manufacturer;
+		float length;
+		Person driver;
+	
+		Car()
+		{
+			manufacturer= "Basic car production";
+			length= 0.0f;
+			driver= Person();
+		}
+		
+		~Car()
+		{
 		}
 };
 
@@ -157,4 +196,5 @@ int main(void )
 	//}
 	
 //Step 6
+	Car test_car;
 }
