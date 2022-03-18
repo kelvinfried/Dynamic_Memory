@@ -22,13 +22,13 @@ class Soldier
 class Person
 {
 	public:
-		double* age;
+		int* age;
 	
 		//Constructor
 		Person()
 		{
 			//Sets the value
-			age= new double(1000000000);
+			age= new int(10);
 		}
 		
 		//Destructor- To  delete the dynamic vairables, called upon class deletion
