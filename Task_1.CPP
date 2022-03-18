@@ -18,7 +18,7 @@ int main(void )
 	//Delete the dynamic int
 	delete i;
 	i= NULL;*/
-//Step 2
+/*//Step 2
 	//int* array_pointer= new int(5 );	//Incorrect
 	int *array_pointer= new int[5 ];
 	
@@ -38,6 +38,8 @@ int main(void )
 	std::cout<<"Address: "<< &array_pointer[3 ] <<std::endl;
 	
 	delete[] array_pointer;
-	array_pointer= NULL;
+	array_pointer= NULL;*/
+	
+//Step 3
 
 }
