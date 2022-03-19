@@ -1,4 +1,6 @@
 #include <iostream>
+#include <stdlib.h>
+#include <time.h>
 
 //dynamic memory allocation
 
@@ -100,9 +102,12 @@ class Powerup
 	
 		Powerup()
 		{
-			x_position= 0.0;
-			y_position= 0.0f;
-			rotation= 0.0f;
+			//x_position= 0.0;
+			x_position= rand() %100;
+			//y_position= 0.0f;
+			y_position= rand() %100;
+			//rotation= 0.0f;
+			rotation= rand() %360;
 		}
 		
 		Powerup(float x_value, float y_value, float rotation_value )
@@ -326,6 +331,8 @@ int main(void )
 	theFunction(1, 2.0f);*/
 	
 //Step 15
+	srand (time(NULL));
+	
 	Game test_run;
 	test_run.display();
 	return 0;
