@@ -92,6 +92,24 @@ class Car
 		}
 };
 
+class Powerup
+{
+	public:
+		float x_position, y_position;
+		float rotation;
+	
+	Powerup()
+	{
+		x_position= 0.0;
+		y_position= 0.0f;
+		rotation= 0.0f;
+	}
+	
+	~Powerup()
+	{
+	}
+};
+
 //Step 11
 void theFunction(void )
 {
