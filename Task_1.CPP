@@ -327,5 +327,6 @@ int main(void )
 	
 //Step 15
 	Game test_run;
+	test_run.display();
 	return 0;
 }
