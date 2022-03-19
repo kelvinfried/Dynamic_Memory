@@ -219,7 +219,7 @@ int main(void )
 	//Test to print out the person from the car
 	std::cout<<"The person in the car is called " <<car_pointer-> driver.name <<std::endl <<std::endl;*/
 	
-	//Step 9
+	/*//Step 9
 	//Creat car from the free store
 	//Car* car_pointer= new Car;
 	Car* car_pointer= new Car(4 );
@@ -233,5 +233,7 @@ int main(void )
 	}
 	
 	delete car_pointer;
-	car_pointer= NULL;
+	car_pointer= NULL;*/
+	
+//Step 11
 }
