@@ -105,7 +105,12 @@ void theFunction(int x )
 
 void theFunction(int x, int y )
 {
-	std::cout<<"Third function :skull: " <<x <<"and then " <<y <<std::endl;
+	std::cout<<"Third function :skull: " <<x <<" and then " <<y <<std::endl;
+}
+
+void theFunction(int x, float y )
+{
+	std::cout<<"forth function :skull: " <<x <<" and then " <<y <<std::endl;
 }
 
 int main(void )
@@ -254,6 +259,8 @@ int main(void )
 //Step 11
 	theFunction();
 	theFunction(1 );
+	theFunction(1, 2);
+	theFunction(1, 2.0f);
 	
 	return 0;
 }
