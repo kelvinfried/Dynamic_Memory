@@ -98,16 +98,43 @@ class Powerup
 		float x_position, y_position;
 		float rotation;
 	
-	Powerup()
-	{
-		x_position= 0.0;
-		y_position= 0.0f;
-		rotation= 0.0f;
-	}
+		Powerup()
+		{
+			x_position= 0.0;
+			y_position= 0.0f;
+			rotation= 0.0f;
+		}
+		
+		Powerup(float x_value, float y_value, float rotation_value )
+		{
+			x_position= x_value;
+			y_position= y_value;
+			rotation= rotation_value; 
+		}
+		
+		~Powerup()
+		{
+		}
+};
+
+class Game
+{
+	public:
+		Powerup* powerup_pointer_0;
+		Powerup* powerup_pointer_1;
 	
-	~Powerup()
-	{
-	}
+		Game()
+		{
+			//One spawned with the default constructor
+			powerup_pointer_0= new Powerup;
+			//powerup_pointer_1= new Powerup;
+			//One spawned with the overridden constructor
+			powerup_pointer_1= new Powerup(10.0f, 10.0f, 180.0f );
+		}
+		
+		~Game()
+		{
+		}
 };
 
 //Step 11
@@ -280,5 +307,7 @@ int main(void )
 	theFunction(1, 2);
 	theFunction(1, 2.0f);*/
 	
+//Step 15
+	Game test_run;
 	return 0;
 }
