@@ -256,11 +256,11 @@ int main(void )
 	delete car_pointer;
 	car_pointer= NULL;*/
 	
-//Step 11
+/*	//Step 11
 	theFunction();
 	theFunction(1 );
 	theFunction(1, 2);
-	theFunction(1, 2.0f);
+	theFunction(1, 2.0f);*/
 	
 	return 0;
 }
