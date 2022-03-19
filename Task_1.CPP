@@ -123,6 +123,19 @@ class Game
 		Powerup* powerup_pointer_0;
 		Powerup* powerup_pointer_1;
 	
+		void display(void )
+		{
+			//Pointer one
+			std::cout<<"X is " <<powerup_pointer_0-> x_position <<std::endl;
+			std::cout<<"Y is " <<powerup_pointer_0-> y_position <<std::endl;
+			std::cout<<"Rotation is " <<powerup_pointer_0-> rotation <<std::endl<<std::endl;
+			
+			//Pointer two
+			std::cout<<"X is " <<powerup_pointer_1-> x_position <<std::endl;
+			std::cout<<"Y is " <<powerup_pointer_1-> y_position <<std::endl;
+			std::cout<<"Rotation is " <<powerup_pointer_1-> rotation <<std::endl<<std::endl;
+		}
+		
 		Game()
 		{
 			//One spawned with the default constructor
@@ -135,10 +148,10 @@ class Game
 		~Game()
 		{
 			delete powerup_pointer_0;
-			powerup_pointer_0= NULL
+			powerup_pointer_0= NULL;
 			
 			delete powerup_pointer_1;
-			powerup_pointer_1= NULL
+			powerup_pointer_1= NULL;
 		}
 };
 
