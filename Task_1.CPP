@@ -65,17 +65,29 @@ class Car
 	public:
 		std::string manufacturer;
 		float length;
-		Person driver;
+		//Person driver;	//Going to creat a dynamic class, as one of the class attributes
+		Person* occupant_pointer;
 	
 		Car()
 		{
 			manufacturer= "Basic car production";
 			length= 0.0f;
-			driver= Person();
+			//driver= Person();
+			occupant_pointer= new Person[2 ];
 		}
+		
+		//Over-ridden constructor
+		Car(int number_of_passengers )
+		{
+			manufacturer= "Basic car production";
+			length= 0.0f;
+			occupant_pointer= new Person[number_of_passengers ];
+		}		
 		
 		~Car()
 		{
+			delete occupant_pointer;
+			occupant_pointer= NULL;
 		}
 };
 
@@ -197,12 +209,16 @@ int main(void )
 	
 //Step 6	//Step 7
 	//Class from the stack
-	Car test_car; 
+	/*Car test_car; 
 	//Test to print out the person from the car
 	std::cout<<"The person in the car is called " <<test_car.driver.name <<std::endl <<std::endl;
 	
 	//Class from the free store
 	Car* car_pointer= new Car;
 	//Test to print out the person from the car
-	std::cout<<"The person in the car is called " <<car_pointer-> driver.name <<std::endl <<std::endl;
+	std::cout<<"The person in the car is called " <<car_pointer-> driver.name <<std::endl <<std::endl;*/
+	
+	//Step 9
+	//Creat car from the free store
+	Car* car_pointer= new Car;
 }
