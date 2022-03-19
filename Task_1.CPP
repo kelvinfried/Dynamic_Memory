@@ -86,7 +86,8 @@ class Car
 		
 		~Car()
 		{
-			delete occupant_pointer;
+			//To clean up the pointer
+			delete[] occupant_pointer;
 			occupant_pointer= NULL;
 		}
 };
@@ -220,5 +221,17 @@ int main(void )
 	
 	//Step 9
 	//Creat car from the free store
-	Car* car_pointer= new Car;
+	//Car* car_pointer= new Car;
+	Car* car_pointer= new Car(4 );
+	//test to print out the names for the passenters in the car
+	for(int i=0;i<4 ;i++ )
+	{
+		//std::cout<<"Printing out the name of the passenger " <<i << " is " <<car_pointer-> (*occupant_pointer.name)[i ] <<std::endl<<std::endl;
+		car_pointer-> occupant_pointer[i ].name= "passenger ";
+		//std::cout<<"Printing out the name of the passenger " <<i << " is " <<car_pointer-> occupant_pointer[i ].name <<std::endl<<std::endl;	//Testing out the short hand versions.
+		std::cout<<"Printing out the name of the passenger " <<i << " is " <<(*car_pointer).occupant_pointer[i ].name <<std::endl<<std::endl;
+	}
+	
+	delete car_pointer;
+	car_pointer= NULL;
 }
