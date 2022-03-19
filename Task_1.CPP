@@ -331,9 +331,9 @@ int main(void )
 	theFunction(1, 2.0f);*/
 	
 //Step 15 //+
-	srand (time(NULL));
+/*	srand (time(NULL));
 	
 	Game test_run;
 	test_run.display();
-	return 0;
+	return 0;*/
 }
