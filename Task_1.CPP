@@ -196,5 +196,13 @@ int main(void )
 	//}
 	
 //Step 6	//Step 7
+	//Class from the stack
 	Car test_car; 
+	//Test to print out the person from the car
+	std::cout<<"The person in the car is called " <<test_car.driver.name <<std::endl <<std::endl;
+	
+	//Class from the free store
+	Car* car_pointer= new Car;
+	//Test to print out the person from the car
+	std::cout<<"The person in the car is called " <<car_pointer-> driver.name <<std::endl <<std::endl;
 }
