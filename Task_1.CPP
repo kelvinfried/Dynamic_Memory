@@ -161,10 +161,11 @@ class Game
 };
 
 //Step 11
-void theFunction(void )
+void theFunction(void );	//New function prototype
+/*void theFunction(void )
 {
 	std::cout<<"You have called the first version of the function" <<std::endl;
-}
+}*/
 
 void theFunction(int x )
 {
@@ -336,4 +337,11 @@ int main(void )
 	Game test_run;
 	test_run.display();
 	return 0;*/
+//Step 16
+	theFunction();	//testing a function prototype
+}
+
+void theFunction(void )
+{
+	std::cout<<"You have called the first version of the function" <<std::endl;
 }
