@@ -134,6 +134,11 @@ class Game
 		
 		~Game()
 		{
+			delete powerup_pointer_0;
+			powerup_pointer_0= NULL
+			
+			delete powerup_pointer_1;
+			powerup_pointer_1= NULL
 		}
 };
 
