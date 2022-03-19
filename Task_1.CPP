@@ -92,6 +92,17 @@ class Car
 		}
 };
 
+//Step 11
+void theFunction(void )
+{
+	std::cout<<"You have called the first version of the function" <<std::endl;
+}
+
+void theFunction(int x )
+{
+	std::cout<<"You have called the second version of the function and have passed the int number of " <<x <<std::endl;
+}
+
 int main(void )
 {
 //Step 1
