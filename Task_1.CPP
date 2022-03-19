@@ -103,6 +103,11 @@ void theFunction(int x )
 	std::cout<<"You have called the second version of the function and have passed the int number of " <<x <<std::endl;
 }
 
+void theFunction(int x, int y )
+{
+	std::cout<<"Third function :skull: " <<x <<"and then " <<y <<std::endl;
+}
+
 int main(void )
 {
 //Step 1
@@ -247,4 +252,8 @@ int main(void )
 	car_pointer= NULL;*/
 	
 //Step 11
+	theFunction();
+	theFunction(1 );
+	
+	return 0;
 }
